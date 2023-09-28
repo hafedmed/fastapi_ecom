@@ -38,7 +38,7 @@ starlette==0.27.0
 tortoise-orm==0.19.3
 typing_extensions==4.7.1
 ujson==5.7.0
-uvicorn==0.23.2
+uvicorn==20.1.1
 uvloop==0.17.0
 watchfiles==0.20.0
 websockets==11.0.3
