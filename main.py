@@ -248,6 +248,7 @@ async def create_new_category(category:category_pydanticIn,user:user_pydantic=De
             headers={"WWW-AUTHENTICATE":"Bearer"}
         )
     return { "status":"OK","detail":"Category created{ category_obj }"}
+
 @app.delete("/categories/{id}")
 async def delete_product(id:int,user:user_pydantic=Depends(get_current_user)):
     category = await Category.get(id=id)
@@ -262,6 +263,7 @@ async def delete_product(id:int,user:user_pydantic=Depends(get_current_user)):
             headers={"WWW-AUTHENTICATE":"Bearer"}
         )
     return { "status":"OK","detail":"Category and Products related has been Deleted "}   
+
 #CRUD Product 
 @app.get("/products")
 async def get_all_product():
